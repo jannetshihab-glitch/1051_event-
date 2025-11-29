@@ -1,0 +1,20 @@
+﻿@page
+@model EventManagement.Pages._1037_EventListModel
+@{
+    Layout = "_Layout";
+}
+<h3>Event List</h3>
+
+<!-- Current Date & Time Display -->
+<div class="alert alert-info">
+    <strong>Current Date & Time:</strong> @DateTime.Now
+</div>
+
+<!-- Mock Events List -->
+<h4>Upcoming Events:</h4>
+<ul>
+    @foreach (var eventTitle in Model.MockEvents)
+    {
+        <li>@eventTitle</li>
+    }
+</ul>
